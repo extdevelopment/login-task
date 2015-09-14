@@ -1,0 +1,43 @@
+{
+	"env": {
+		"browser": true,
+		"jquery": true
+	},
+	"rules": {
+		"quotes": [2, "single"],
+		"indent": [2, "tab"],
+		"no-console": 0,
+		"no-alert": 1,
+		"no-underscore-dangle": 0,
+		#conflict with eclipse.luna validator :(
+		"dot-notation": 0,
+		#https://github.com/Gillespie59/eslint-plugin-angular/pull/70
+		#add support for regexps from JSON .eslintrc #70 
+		"angular/ng_controller_name": [0, '/[A-Za-z].*Ctrl$/'],
+		#i use single quote 'use strict'; jshint check that
+		"global-strict": 0,
+		"brace-style": [2, "1tbs"],
+		"comma-style": [2, "last"],
+		"default-case": 2,
+		"func-style": [2, "expression"],
+		"guard-for-in": 2,
+		"no-floating-decimal": 2,
+		"no-nested-ternary": 2,
+		"no-undefined": 2,
+		"radix": 2,
+		"space-after-function-name": [2, "never"],
+		"space-after-keywords": [2, "always"],
+		"space-before-blocks": 2,
+		"spaced-line-comment": [2, "always", { exceptions: ["-"]}],
+		"strict": [2, "global"],
+		"valid-jsdoc": [2, { prefer: { "return": "returns"}}],
+		"wrap-iife": 2,
+		"max-len": [2, 120, 4]
+		
+	},
+	
+	#"plugins": ["angular"],
+	"globals": {
+		"angular": true	
+	}
+}

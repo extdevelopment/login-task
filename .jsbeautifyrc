@@ -1,0 +1,7 @@
+{
+	"js" : "@see https://github.com/beautify-web/js-beautify#options",
+	"js": {
+		"indentWithTabs": true,
+		"jslint-happy": true
+	}
+}

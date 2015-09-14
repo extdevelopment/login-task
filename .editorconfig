@@ -1,0 +1,18 @@
+; top-most EditorConfig file
+root = true
+
+;from Symfony2
+; Unix-style newlines
+[*]
+end_of_line = LF
+
+[*.php]
+indent_style = space
+indent_size = 4
+
+;https://github.com/jquery/jquery/blob/master/.editorconfig
+[**.js]
+indent_style = tab
+
+;angular
+;https://github.com/angular/angular.js/blob/master/.editorconfig
