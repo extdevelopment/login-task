@@ -1,5 +1,5 @@
 {
-	"name" : "mana/login",
+	"name" : "netpositive/login",
 	"license" : "proprietary",
 	"type" : "project",
 	"autoload" : {
@@ -19,7 +19,8 @@
 		"sensio/distribution-bundle" : "~4.0",
 		"sensio/framework-extra-bundle" : "^3.0.2",
 		"incenteev/composer-parameter-handler" : "~2.0",
-		"friendsofsymfony/user-bundle" : "~1.3"
+		"friendsofsymfony/user-bundle" : "~1.3",
+		"stof/doctrine-extensions-bundle" : "^1.2"
 	},
 	"require-dev" : {
 		"sensio/generator-bundle" : "~2.3",
@@ -31,7 +32,7 @@
 		"behat/mink-selenium2-driver" : "*",
 		"behat/mink-goutte-driver" : "*",
 		"jarnaiz/behat-junit-formatter" : "^1.0",
-		"phpunit/phpunit": "4.7.*"
+		"phpunit/phpunit" : "4.7.*"
 	},
 	"scripts" : {
 		"post-install-cmd" : [

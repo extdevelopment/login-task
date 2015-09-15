@@ -1,3 +1,4 @@
 netpositive_login_homepage:
-    path:     /hello/{name}
+    path:     /
     defaults: { _controller: "NetpositiveLoginBundle:Default:index" }
+

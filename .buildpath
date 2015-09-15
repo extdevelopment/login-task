@@ -1,33 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildpath>
+	<buildpathentry kind="src" path="vendor/gedmo/doctrine-extensions/lib"/>
 	<buildpathentry kind="src" path="vendor/jdorn/sql-formatter/lib"/>
 	<buildpathentry kind="src" path="vendor/sebastian/global-state/src"/>
+	<buildpathentry kind="src" path="vendor/guzzlehttp/streams/src"/>
 	<buildpathentry kind="src" path="vendor/doctrine/lexer/lib"/>
+	<buildpathentry kind="src" path="vendor/guzzlehttp/ringphp/src"/>
 	<buildpathentry kind="src" path="vendor/symfony/swiftmailer-bundle"/>
+	<buildpathentry kind="src" path="vendor/fabpot/goutte/Goutte"/>
+	<buildpathentry kind="src" path="vendor/react/promise/src"/>
 	<buildpathentry kind="src" path="vendor/sebastian/recursion-context/src"/>
 	<buildpathentry kind="src" path="vendor/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs"/>
 	<buildpathentry kind="src" path="vendor/sebastian/environment/src"/>
 	<buildpathentry kind="src" path="vendor/symfony/symfony/src/Symfony/Bridge/Twig"/>
 	<buildpathentry kind="src" path="vendor/symfony/assetic-bundle"/>
 	<buildpathentry excluding="HttpFoundation/Resources/stubs/|Intl/Resources/stubs/" kind="src" path="vendor/symfony/symfony/src/Symfony/Component"/>
+	<buildpathentry kind="src" path="vendor/behat/mink-selenium2-driver/src"/>
 	<buildpathentry kind="src" path="vendor/phpunit/php-token-stream/src"/>
 	<buildpathentry kind="src" path="vendor/swiftmailer/swiftmailer/lib"/>
 	<buildpathentry kind="src" path="vendor/symfony/symfony/src/Symfony/Bridge/Swiftmailer"/>
 	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
 	<buildpathentry kind="src" path="vendor/friendsofsymfony/user-bundle"/>
+	<buildpathentry kind="src" path="vendor/instaclick/php-webdriver/lib"/>
 	<buildpathentry kind="src" path="vendor/doctrine/common/lib"/>
 	<buildpathentry kind="src" path="vendor/incenteev/composer-parameter-handler"/>
 	<buildpathentry kind="src" path="vendor/symfony/monolog-bundle"/>
 	<buildpathentry kind="src" path="vendor/symfony/symfony/src/Symfony/Bridge/ProxyManager"/>
+	<buildpathentry kind="src" path="vendor/behat/mink-extension/src"/>
 	<buildpathentry kind="src" path="vendor/kriswallsmith/assetic/src"/>
 	<buildpathentry kind="src" path="vendor/doctrine/annotations/lib"/>
 	<buildpathentry kind="src" path="vendor/twig/twig/lib"/>
 	<buildpathentry kind="src" path="src"/>
 	<buildpathentry kind="src" path="vendor/phpunit/php-code-coverage/src"/>
+	<buildpathentry kind="src" path="vendor/jarnaiz/behat-junit-formatter/src"/>
+	<buildpathentry kind="src" path="vendor/behat/mink-goutte-driver/src"/>
 	<buildpathentry kind="src" path="vendor/sensiolabs/security-checker"/>
+	<buildpathentry kind="src" path="vendor/stof/doctrine-extensions-bundle"/>
 	<buildpathentry kind="src" path="vendor/composer"/>
 	<buildpathentry kind="src" path="vendor/phpunit/php-file-iterator/src"/>
 	<buildpathentry kind="src" path="vendor/doctrine/doctrine-cache-bundle"/>
+	<buildpathentry kind="src" path="vendor/behat/symfony2-extension/src"/>
+	<buildpathentry kind="src" path="vendor/guzzlehttp/guzzle/src"/>
 	<buildpathentry kind="src" path="vendor/phpspec/prophecy/src"/>
 	<buildpathentry kind="src" path="vendor/doctrine/dbal/lib"/>
 	<buildpathentry kind="src" path="vendor/doctrine/inflector/lib"/>
@@ -36,10 +49,12 @@
 	<buildpathentry kind="src" path="vendor/doctrine/orm/lib"/>
 	<buildpathentry kind="src" path="vendor/monolog/monolog/src/Monolog"/>
 	<buildpathentry kind="src" path="vendor/phpdocumentor/reflection-docblock/src"/>
+	<buildpathentry kind="src" path="vendor/behat/mink/src"/>
 	<buildpathentry kind="src" path="vendor/doctrine/collections/lib"/>
 	<buildpathentry kind="src" path="vendor/phpunit/php-timer/src"/>
 	<buildpathentry kind="src" path="vendor/symfony/symfony/src/Symfony/Bridge/Monolog"/>
 	<buildpathentry kind="src" path="vendor/behat/behat/src"/>
+	<buildpathentry kind="src" path="vendor/behat/mink-browserkit-driver/src"/>
 	<buildpathentry kind="src" path="vendor/symfony/symfony/src/Symfony/Bundle"/>
 	<buildpathentry kind="src" path="vendor/behat/transliterator/src"/>
 	<buildpathentry kind="src" path="vendor/sensio/framework-extra-bundle"/>
