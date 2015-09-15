@@ -53,7 +53,7 @@ class User extends BaseUser
      * @var
      *
      * @ORM\Column(type="string", name="phone", nullable=true, length=100, options={"default" = null})
-     * @Assert\Regex("/^\d+/")
+     * @Assert\Regex("/^\d+$/")
      */
     protected $phone;
 

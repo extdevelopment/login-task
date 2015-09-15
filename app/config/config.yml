@@ -91,7 +91,7 @@ fos_user:
             enabled:    false # change to true for required email confirmation
             template:   FOSUserBundle:Registration:email.txt.twig
         form:
-            type:               fos_user_registration
+            type:               netpositive_user_registration
             name:               fos_user_registration_form
             validation_groups:  [Registration, Default]
             

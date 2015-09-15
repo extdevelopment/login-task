@@ -1,0 +1,4 @@
+# Form field labels
+form:
+    full_name: "Full name:"
+    phone: "Phone:"
