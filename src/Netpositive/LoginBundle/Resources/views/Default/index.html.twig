@@ -2,6 +2,6 @@
 
 {% block body %}
 	<a href="{{path('fos_user_security_logout')}}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a></li>
-    <h1>Hello</h1>
+    <h1>Hello {{ user.fullName is empty ? user.email : user.fullName }}</h1>
     <h2>This is login protected page!</h2>
 {% endblock %}
