@@ -8,7 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 /**
  * RegistrationType.
  *
- * @author zsolt.kobor
+ * @author zsolt.k
  */
 class RegistrationType extends AbstractType
 {

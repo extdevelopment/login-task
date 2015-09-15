@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 /**
  * SecurityListener.
  *
- * @author zsolt.kobor
+ * @author zsolt.k
  */
 class InteractiveLoginListener
 {
@@ -39,13 +39,13 @@ class InteractiveLoginListener
         $user = $event->getAuthenticationToken()->getUser();
 
         if ($user instanceof UserInterface) {
-            $ip = $this
+            $ipAddress = $this
                 ->requestStack
                 ->getCurrentRequest()
                 ->server
                 ->get('REMOTE_ADDR');
 
-            $user->setLastloginClientIp($ip);
+            $user->setLastloginClientIp($ipAddress);
             $this->userManager->updateUser($user);
         }
     }

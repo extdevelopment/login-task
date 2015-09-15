@@ -9,7 +9,7 @@ use FOS\UserBundle\Model\UserInterface;
 /**
  * DefaultController.
  *
- * @author zsolt.kobor
+ * @author zsolt.k
  */
 class DefaultController extends Controller
 {
