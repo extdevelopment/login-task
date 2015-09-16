@@ -27,7 +27,8 @@ class RegistrationType extends AbstractType
             ->add('phone', null, array(
                 'label' => 'form.phone',
                 'translation_domain' => 'NetpositiveLoginBundle',
-            ));
+            ))
+            ->remove('username');
     }
 
     /**

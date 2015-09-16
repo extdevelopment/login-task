@@ -82,6 +82,20 @@ class User extends BaseUser
     }
 
     /**
+     * override original setter, with set username with email
+     * {@inheritDoc}
+     *
+     * @see \FOS\UserBundle\Model\User::setEmail()
+     */
+    public function setEmail($email)
+    {
+        parent::setEmail($email);
+        $this->setUsername($email);
+
+        return $this;
+    }
+
+    /**
      * Set createDatetime.
      *
      * @param \DateTime $createDatetime
