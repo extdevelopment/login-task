@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * This file is part of the LoginBundle package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Netpositive\LoginBundle\EventListener;
 
 use FOS\UserBundle\Model\UserManagerInterface;
@@ -14,10 +21,23 @@ use Symfony\Component\HttpFoundation\RequestStack;
  */
 class InteractiveLoginListener
 {
+    /**
+     * UserManagerInterface instance.
+     *
+     * @var UserManagerInterface
+     */
     protected $userManager;
+
+    /**
+     * RequestStack instance.
+     *
+     * @var RequestStack
+     */
     protected $requestStack;
 
     /**
+     * constructor.
+     *
      * @param UserManagerInterface $userManager
      * @param RequestStack         $requestStack
      *

@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * This file is part of the LoginBundle package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Netpositive\UtilBundle\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Console\Application;
@@ -23,7 +30,18 @@ use FOS\UserBundle\Command\PromoteUserCommand;
  */
 trait TestHelperTrait
 {
+    /**
+     * EntityManager instance.
+     *
+     * @var EntityManager
+     */
     private $em;
+
+    /**
+     * Application is the container for a collection of commands.
+     *
+     * @var Application
+     */
     private $application;
 
     /**
@@ -69,6 +87,8 @@ trait TestHelperTrait
     }
 
     /**
+     * load Fixture.
+     *
      * @param array $fixtures optional fixtures location if not set will load all fixtures
      *                        example:
      *                        array(
@@ -126,6 +146,8 @@ trait TestHelperTrait
     }
 
     /**
+     * create Authorized Client.
+     *
      * @param string $username username
      *
      * @see https://advancingusability.wordpress.com
@@ -160,6 +182,8 @@ trait TestHelperTrait
     }
 
     /**
+     * create FOS User.
+     *
      * @param string $username username
      * @param string $password password
      */
@@ -179,6 +203,8 @@ trait TestHelperTrait
     }
 
     /**
+     * add Role to FOS user.
+     *
      * @param string $username username
      * @param string $role     role
      */

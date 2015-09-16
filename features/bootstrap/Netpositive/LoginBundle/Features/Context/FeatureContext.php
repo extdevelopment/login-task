@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * This file is part of the LoginBundle package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Netpositive\LoginBundle\Features\Context;
 
 use Behat\Behat\Context\Context;
@@ -27,6 +34,8 @@ class FeatureContext implements Context, SnippetAcceptingContext
     }
 
     /**
+     * Before Suite todo handler.
+     *
      * @BeforeSuite
      *
      * @param BeforeSuiteScope $scope
@@ -40,6 +49,8 @@ class FeatureContext implements Context, SnippetAcceptingContext
     }
 
     /**
+     * Step Definition my Ip Stored In User Table.
+     *
      * @Then /^My Ip stored in user table$/
      */
     public function myIpStoredInUserTable()

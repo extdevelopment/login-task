@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * This file is part of the LoginBundle package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Netpositive\LoginBundle\Entity;
 
 use FOS\UserBundle\Entity\User as BaseUser;
@@ -10,6 +17,8 @@ use Doctrine\ORM\Mapping\AttributeOverrides;
 use Doctrine\ORM\Mapping\AttributeOverride;
 
 /**
+ * User Entity.
+ *
  * @ORM\Entity
  * @ORM\Table(name="fos_user")
  *
@@ -27,6 +36,10 @@ use Doctrine\ORM\Mapping\AttributeOverride;
 class User extends BaseUser
 {
     /**
+     * id.
+     *
+     * @var int
+     *
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -34,23 +47,30 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @var
+     * last login Client Ip.
      *
-     * // max length: IPV6 (8*4)+7
+     * @var string
+     *
+     * max length: IPV6 (8*4)+7
+     *
      * @ORM\Column(type="string", name="last_login_client_ip", nullable=true, length=39, options={"default" = null})
      * @Assert\Ip(version="all")
      */
-    protected $lastloginClientIp;
+    protected $lastLoginClientIp;
 
     /**
-     * @var
+     * full Name.
+     *
+     * @var string
      *
      * @ORM\Column(type="string", name="full_name", nullable=true, length=255, options={"default" = null})
      */
     protected $fullName;
 
     /**
-     * @var
+     * phone.
+     *
+     * @var string
      *
      * @ORM\Column(type="string", name="phone", nullable=true, length=100, options={"default" = null})
      * @Assert\Regex("/^\d+$/")
@@ -58,6 +78,8 @@ class User extends BaseUser
     protected $phone;
 
     /**
+     * create Date time.
+     *
      * @var \DateTime
      *
      * @Gedmo\Timestampable(on="create")
@@ -66,6 +88,8 @@ class User extends BaseUser
     private $createDatetime;
 
     /**
+     * update Date time.
+     *
      * @var \DateTime
      *
      * @Gedmo\Timestampable(on="update")
@@ -82,7 +106,8 @@ class User extends BaseUser
     }
 
     /**
-     * override original setter, with set username with email
+     * override original setter, with set username with email.
+     *
      * {@inheritDoc}
      *
      * @see \FOS\UserBundle\Model\User::setEmail()
@@ -144,27 +169,27 @@ class User extends BaseUser
     }
 
     /**
-     * Set lastloginClientIp.
+     * Set lastLoginClientIp.
      *
-     * @param string $lastloginClientIp
+     * @param string $lastLoginClientIp
      *
      * @return User
      */
-    public function setLastloginClientIp($lastloginClientIp)
+    public function setLastloginClientIp($lastLoginClientIp)
     {
-        $this->lastloginClientIp = $lastloginClientIp;
+        $this->lastLoginClientIp = $lastLoginClientIp;
 
         return $this;
     }
 
     /**
-     * Get lastloginClientIp.
+     * Get lastLoginClientIp.
      *
      * @return string
      */
     public function getLastloginClientIp()
     {
-        return $this->lastloginClientIp;
+        return $this->lastLoginClientIp;
     }
 
     /**

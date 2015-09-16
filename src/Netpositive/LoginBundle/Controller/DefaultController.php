@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * This file is part of the LoginBundle package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Netpositive\LoginBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -14,6 +21,8 @@ use FOS\UserBundle\Model\UserInterface;
 class DefaultController extends Controller
 {
     /**
+     * index Action.
+     *
      * @throws AccessDeniedException
      *
      * @return Response A Response instance
