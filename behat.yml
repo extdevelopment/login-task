@@ -1,0 +1,27 @@
+default:
+  extensions:
+    #https://github.com/Behat/Symfony2Extension/blob/master/doc/index.rst
+    Behat\Symfony2Extension: ~
+    # https://github.com/Behat/MinkExtension/blob/master/doc/index.rst
+    Behat\MinkExtension:
+      #not work with Symfony 2.7.4.    
+      #base_url: http://localhost/symfony/netpositive/netpositive-login/web/app_test.php
+      sessions:
+        symfony2:
+          symfony2: ~
+        javascript:
+          selenium2: ~
+      browser_name: firefox
+      # Whether the opened page should be shown automatically when a step fails.
+      show_auto: false
+      show_cmd: firefox %s
+    jarnaiz\JUnitFormatter\JUnitFormatterExtension:
+        filename: behat-junit.xml
+        outputDir: "%paths.base%/app/build/reports"
+  suites:
+    login_suite:
+      type: symfony_bundle
+      bundle: 'NetpositiveLoginBundle'
+      contexts:
+        - Behat\MinkExtension\Context\MinkContext
+        - Netpositive\LoginBundle\Features\Context\FeatureContext

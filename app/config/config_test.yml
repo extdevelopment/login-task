@@ -1,5 +1,9 @@
 imports:
     - { resource: config_dev.yml }
+    - { resource: parameters.test.yml }
+
+parameters:
+    locale: en
 
 framework:
     test: ~
@@ -7,6 +11,8 @@ framework:
         storage_id: session.storage.mock_file
     profiler:
         collect: false
+    translator:      { fallbacks: ["%locale%"] }
+    default_locale:  "%locale%"
 
 web_profiler:
     toolbar: false

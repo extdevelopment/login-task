@@ -20,6 +20,10 @@ class DefaultControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/');
 
-        $this->assertTrue($crawler->filter('html:contains("Jelszó:")')->count() > 0);
+        $crawler = $client->followRedirect();
+
+        $this->assertTrue($crawler->filter('html:contains("Password:")')->count() === 1);
+        $this->assertTrue($crawler->filter('html:contains("Email:")')->count() === 1);
+        $this->assertTrue($crawler->filter('html:contains("This is login protected page!")')->count() === 0);
     }
 }
