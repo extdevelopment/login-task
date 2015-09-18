@@ -9,3 +9,8 @@ Running Tests
 $ bin/behat
 
 $ bin/phpunit -c app
+
+Facebook login config
+===
+
+In parameters.yml and parameters.test.yml to be defined facebook_app_id and facebook_app_secret keys.

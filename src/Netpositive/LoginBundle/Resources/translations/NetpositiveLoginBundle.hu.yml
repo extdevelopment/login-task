@@ -2,3 +2,5 @@
 form:
     full_name: "Teljes név:"
     phone: "Telefonszám:"
+layout:
+    sign_in_with_facebook: "Bejelenkezés Facebook-al"

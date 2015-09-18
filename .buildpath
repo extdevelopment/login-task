@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildpath>
 	<buildpathentry kind="src" path="vendor/gedmo/doctrine-extensions/lib"/>
+	<buildpathentry kind="src" path="vendor/hwi/oauth-bundle"/>
 	<buildpathentry kind="src" path="vendor/jdorn/sql-formatter/lib"/>
 	<buildpathentry kind="src" path="vendor/sebastian/global-state/src"/>
 	<buildpathentry kind="src" path="vendor/guzzlehttp/streams/src"/>
@@ -67,6 +68,7 @@
 	<buildpathentry kind="src" path="vendor/sensio/distribution-bundle"/>
 	<buildpathentry kind="src" path="vendor/sensio/generator-bundle"/>
 	<buildpathentry kind="src" path="vendor/sebastian/version/src"/>
+	<buildpathentry kind="src" path="vendor/kriswallsmith/buzz/lib"/>
 	<buildpathentry kind="src" path="vendor/doctrine/cache/lib"/>
 	<buildpathentry kind="src" path="vendor/phpunit/phpunit/src"/>
 	<buildpathentry kind="src" path="vendor/doctrine/doctrine-bundle"/>

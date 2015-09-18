@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * This file is part of the LoginBundle package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Netpositive\LoginBundle\Entity;
 
 use FOS\UserBundle\Entity\User as BaseUser;
@@ -10,6 +17,8 @@ use Doctrine\ORM\Mapping\AttributeOverrides;
 use Doctrine\ORM\Mapping\AttributeOverride;
 
 /**
+ * User Entity.
+ *
  * @ORM\Entity
  * @ORM\Table(name="fos_user")
  *
@@ -18,54 +27,79 @@ use Doctrine\ORM\Mapping\AttributeOverride;
 class User extends BaseUser
 {
     /**
+     * id.
+     *
+     * @var int
+     *
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-    
+
     /**
-     * @var $lastloginClientIp
+     * last login Client Ip.
      *
-     * // max length: IPV6 (8*4)+7
+     * @var string
+     *
+     * max length: IPV6 (8*4)+7
+     *
      * @ORM\Column(type="string", name="last_login_client_ip", nullable=true, length=39, options={"default" = null})
      * @Assert\Ip(version="all")
      */
-    protected $lastloginClientIp;
+    protected $lastLoginClientIp;
 
     /**
-     * @var $fullName
+     * full Name.
+     *
+     * @var string
      *
      * @ORM\Column(type="string", name="full_name", nullable=true, length=255, options={"default" = null})
      */
     protected $fullName;
-    
+
     /**
-     * @var $phone
+     * phone.
+     *
+     * @var string
      *
      * @ORM\Column(type="string", name="phone", nullable=true, length=100, options={"default" = null})
-     * @Assert\Regex("/^\d+/")
+     * @Assert\Regex("/^\d+$/")
      */
     protected $phone;
-    
+
     /**
-     * @var \DateTime $createDatetime
+     * create Date time.
+     *
+     * @var \DateTime
      *
      * @Gedmo\Timestampable(on="create")
      * @ORM\Column(type="datetime", name="create_datetime")
      */
     private $createDatetime;
-    
+
     /**
-     * @var \DateTime $updateDatetime
+     * update Date time.
+     *
+     * @var \DateTime
      *
      * @Gedmo\Timestampable(on="update")
      * @ORM\Column(type="datetime", name="update_datetime")
      */
     private $updateDatetime;
+    
+    /** 
+     * @ORM\Column(name="facebook_id", type="string", length=255, nullable=true) 
+     */
+    protected $facebookId;
+    
+    /** 
+     * @ORM\Column(name="facebook_access_token", type="string", length=255, nullable=true)
+     */
+    protected $facebookAccessToken;
 
     /**
-     * constructor
+     * constructor.
      */
     public function __construct()
     {
@@ -73,7 +107,22 @@ class User extends BaseUser
     }
 
     /**
-     * Set createDatetime
+     * override original setter, with set username with email.
+     *
+     * {@inheritDoc}
+     *
+     * @see \FOS\UserBundle\Model\User::setEmail()
+     */
+    public function setEmail($email)
+    {
+        parent::setEmail($email);
+        $this->setUsername($email);
+
+        return $this;
+    }
+
+    /**
+     * Set createDatetime.
      *
      * @param \DateTime $createDatetime
      *
@@ -87,7 +136,7 @@ class User extends BaseUser
     }
 
     /**
-     * Get createDatetime
+     * Get createDatetime.
      *
      * @return \DateTime
      */
@@ -97,7 +146,7 @@ class User extends BaseUser
     }
 
     /**
-     * Set updateDatetime
+     * Set updateDatetime.
      *
      * @param \DateTime $updateDatetime
      *
@@ -111,7 +160,7 @@ class User extends BaseUser
     }
 
     /**
-     * Get updateDatetime
+     * Get updateDatetime.
      *
      * @return \DateTime
      */
@@ -121,31 +170,31 @@ class User extends BaseUser
     }
 
     /**
-     * Set lastloginClientIp
+     * Set lastLoginClientIp.
      *
-     * @param string $lastloginClientIp
+     * @param string $lastLoginClientIp
      *
      * @return User
      */
-    public function setLastloginClientIp($lastloginClientIp)
+    public function setLastloginClientIp($lastLoginClientIp)
     {
-        $this->lastloginClientIp = $lastloginClientIp;
+        $this->lastLoginClientIp = $lastLoginClientIp;
 
         return $this;
     }
 
     /**
-     * Get lastloginClientIp
+     * Get lastLoginClientIp.
      *
      * @return string
      */
     public function getLastloginClientIp()
     {
-        return $this->lastloginClientIp;
+        return $this->lastLoginClientIp;
     }
 
     /**
-     * Set fullName
+     * Set fullName.
      *
      * @param string $fullName
      *
@@ -159,7 +208,7 @@ class User extends BaseUser
     }
 
     /**
-     * Get fullName
+     * Get fullName.
      *
      * @return string
      */
@@ -169,7 +218,7 @@ class User extends BaseUser
     }
 
     /**
-     * Set phone
+     * Set phone.
      *
      * @param string $phone
      *
@@ -183,7 +232,7 @@ class User extends BaseUser
     }
 
     /**
-     * Get phone
+     * Get phone.
      *
      * @return string
      */
@@ -191,4 +240,5 @@ class User extends BaseUser
     {
         return $this->phone;
     }
+
 }

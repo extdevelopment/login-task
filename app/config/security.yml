@@ -18,6 +18,15 @@ security:
                 csrf_provider: security.csrf.token_manager # Use form.csrf_provider instead for Symfony <2.4
                 always_use_default_target_path: true
                 default_target_path:            /
+            oauth:
+                resource_owners:
+                    facebook:           "/login/check-facebook"
+                login_path:        /login
+                use_forward:       false
+                failure_path:      /login
+
+                oauth_user_provider:
+                    service: netpositive.provider.oauth
             logout:       true
             anonymous:    true
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -29,4 +38,5 @@ security:
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/connect/facebook, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/.*, role: ROLE_USER }

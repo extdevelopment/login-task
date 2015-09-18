@@ -2,3 +2,5 @@
 form:
     full_name: "Full name:"
     phone: "Phone:"
+layout:
+    sign_in_with_facebook: "Sign in with Facebook"

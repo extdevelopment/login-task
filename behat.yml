@@ -11,6 +11,8 @@ default:
           symfony2: ~
         javascript:
           selenium2: ~
+        goutte:
+          goutte: ~
       browser_name: firefox
       # Whether the opened page should be shown automatically when a step fails.
       show_auto: false

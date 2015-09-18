@@ -99,3 +99,30 @@ stof_doctrine_extensions:
     orm:
         default:
             timestampable: true
+
+hwi_oauth:
+    firewall_name: main
+    http_client:
+        verify_peer: true
+    fosub:
+        username_iterations: 30
+        properties:
+            facebook: facebookId
+    #connect: ~
+    resource_owners:
+        facebook:
+            type:                facebook
+            client_id:           "%facebook_app_id%"
+            client_secret:       "%facebook_app_secret%"
+            scope:               "email"
+            infos_url:           "https://graph.facebook.com/me?fields=id,name,email,picture.type(square)"
+            paths:
+                email:          email
+                profilepicture: picture.data.url
+            options:
+                #Accepted values are: "page", "popup", "touch"
+                display:        page 
+                #error : "The option "auth_type" does not exist."
+                #https://github.com/hwi/HWIOAuthBundle/issues/835
+                #auth_type: rerequest # Re-asking for Declined Permissions
+            

@@ -59,4 +59,9 @@ Feature: login and register tests
         And I fill in "Password:" with "notexsist"
         And I press "Login"
         Then I should see "Bad credentials."
-        
+    #@mink:goutte
+    Scenario: login with Facebook should be redirect to facebook.com
+        Given I am on "/"
+        #Then show last response
+        When I follow "Sign in with Facebook"
+        Then I should be on "/v2.0/dialog/oauth"

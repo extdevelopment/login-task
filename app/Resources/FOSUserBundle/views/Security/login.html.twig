@@ -4,7 +4,14 @@
 {% if error %}
     <div>{{ error|trans({}, 'FOSUserBundle') }}</div>
 {% endif %}
-<a href="{{ path('fos_user_registration_register') }}">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a>
+<ul>
+	<li>
+		<a href="{{ path('fos_user_registration_register') }}">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a>
+	</li>
+	<li>
+		<a href="{{ path('hwi_oauth_service_redirect', {'service': 'facebook' }) }}">{{'layout.sign_in_with_facebook'|trans({}, 'NetpositiveLoginBundle') }}</a>
+	</li>
+</ul>
 <form action="{{ path("fos_user_security_check") }}" method="post">
     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 
@@ -20,14 +27,3 @@
     <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" />
 </form>
 {% endblock fos_user_content %}
-
-{# {% extends 'FOSUserBundle:Security:login.html.twig' %}#}
-
-{# {% block fos_user_content %}#}
-{# 	{{ parent() }}#}
-{# 	asdsad#}
-{# {% endblock fos_user_content %}#}
-{# {% block aaa %}#}
-{# {{ parent() }}#}
-{# asds#}
-{# {% endblock %}#}
